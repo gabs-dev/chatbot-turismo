@@ -1,5 +1,12 @@
+import Lexico.Lexico;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        Lexico lexico = new Lexico();
+
+        lexico.removeStopWords("Qual profissão você trabalha?");
+
+        lexico.similar("Gabriel", "Gabrel", 2);
     }
 }
