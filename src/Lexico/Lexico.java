@@ -1,80 +1,59 @@
 package Lexico;
 
+import Util.StringHandler;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-import org.apache.commons.text.similarity.LevenshteinDistance;
+import java.util.*;
 
 public class Lexico {
 
     private String query;
-    private String treatedQuery;
     private List<String> symbolTable;
     private Queue<String> queue;
+    private List<String> identifiers;
 
     public Lexico() {
         symbolTable = new ArrayList<>();
         queue = new LinkedList<>();
+        identifiers = new ArrayList<>(Arrays.asList("como", "qual", "para", "lista", "clima"));
     }
 
-    /**
-     *
-     * @param content
-     * @return
-     */
-    public boolean isPartOfTheAlphabet(String content) {
-        String regex = "[\\p{L}\\p{N}\\p{Punct}&&[^\\[\\]{}()<>«»‘’“”‘’\"'`´^~¨¬¢£¤¥¦§¨©ª«¬®¯°±²³´µ¶·¹º»¼½¾¿×÷]]";
+    public void checkAlphabet(String query) {
+        query = StringHandler.processSpecialCharacters(query);
 
-        if (content.matches(regex))
-            return true;
+        ArrayList<String> words = StringHandler.splitQuery(query);
 
-        return false;
+        for(int i = 0; i < words.size(); i++) {
+            if (!isPartOfTheAlphabet(words.get(i)))
+                words.remove(i);
+        }
+
+        this.query = StringHandler.concatenateWords(words);
     }
 
-    public String removeStopWords(String content) {
+    public String removeStopWords(String query) {
+        checkAlphabet(query);
+
         List<String> stopWords = stopWords();
 
-        List<String> allWords = splitQuery(content);
+        List<String> allWords = StringHandler.splitQuery(this.query);
 
         allWords.removeAll(stopWords);
-        String result = allWords.stream().collect(Collectors.joining(" "));
+        this.query = StringHandler.concatenateWords(allWords);
 
-        return result;
-    }
-
-    /**
-     * Função para calcular a similaridade entre duas strings com um grau de erro.
-     * Utiliza a classe LevenshteinDistance que implementa o algoritmo de distância de Levenshtein.
-     * A classe está disponível na biblioteca Apache Commons Text.
-     * Fontes: https://www.techiedelight.com/pt/calculate-string-similarity-java/
-     * https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/similarity/LevenshteinDistance.html
-     * @param str1
-     * @param str2
-     * @param error Grau de erro máximo entre as duas strings
-     */
-    public boolean similar(String str1, String str2, int error) {
-        int distance = LevenshteinDistance.getDefaultInstance().apply(str1, str2);
-
-        if (distance <= error)
-            return true;
-
-        return false;
+        return this.query;
     }
 
     public void addInSymbolTable() {
-        ArrayList<String> words = splitQuery(this.treatedQuery);
-
+        List<String> words = StringHandler.splitQuery(this.query);
+        words.removeAll(identifiers);
         symbolTable.addAll(words);
     }
 
     public void addInQueue() {
-        queue.addAll(splitQuery(this.treatedQuery));
+        queue.addAll(StringHandler.splitQuery(this.query));
     }
 
     private List<String> stopWords() {
@@ -99,12 +78,13 @@ public class Lexico {
         return stopWords;
     }
 
-    private ArrayList<String> splitQuery(String query) {
-        ArrayList<String> words =
-                Stream.of(query.toLowerCase().split(" "))
-                        .collect(Collectors.toCollection(ArrayList<String>::new));
+    private boolean isPartOfTheAlphabet(String content) {
+        String regex = "[\\p{L}\\p{N}\\p{P}\\p{Zs}@]+";
 
-        return words;
+        if (content.matches(regex))
+            return true;
+
+        return false;
     }
 
 }

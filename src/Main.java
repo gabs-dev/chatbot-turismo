@@ -5,8 +5,11 @@ public class Main {
 
         Lexico lexico = new Lexico();
 
-        lexico.removeStopWords("Qual profissão você trabalha?");
+        String query = "O clim@ vai estar chuvoso em fortaleza no natal?";
 
-        lexico.similar("Gabriel", "Gabrel", 2);
+        lexico.removeStopWords(query);
+        lexico.addInSymbolTable();
+        lexico.addInQueue();
+
     }
 }
