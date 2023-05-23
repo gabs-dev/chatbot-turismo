@@ -1,5 +1,7 @@
-package Lexico;
+package Lexicon;
 
+import Syntactic.Syntactic;
+import Util.ReadFiles;
 import Util.StringHandler;
 
 import java.io.BufferedReader;
@@ -7,17 +9,26 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
-public class Lexico {
+public class Lexicon {
 
     private String query;
     private List<String> symbolTable;
     private Queue<String> queue;
     private List<String> identifiers;
 
-    public Lexico() {
+    public Lexicon() {
         symbolTable = new ArrayList<>();
         queue = new LinkedList<>();
         identifiers = new ArrayList<>(Arrays.asList("como", "qual", "para", "lista", "clima"));
+    }
+
+    public void init(String query) {
+        removeStopWords(query);
+        addInQueue();
+        removeExpectedWords();
+        addInSymbolTable();
+        Syntactic syntactic = new Syntactic(queue);
+        syntactic.checkRule(queue);
     }
 
     public void checkAlphabet(String query) {
@@ -36,11 +47,23 @@ public class Lexico {
     public String removeStopWords(String query) {
         checkAlphabet(query);
 
-        List<String> stopWords = stopWords();
+        List<String> stopWords = ReadFiles.readStopWordsFile();
 
         List<String> allWords = StringHandler.splitQuery(this.query);
 
         allWords.removeAll(stopWords);
+        this.query = StringHandler.concatenateWords(allWords);
+
+        return this.query;
+    }
+
+    public String removeExpectedWords() {
+        List<String> expectedWords = ReadFiles.readExpectedWordsFile();
+
+        List<String> allWords = StringHandler.splitQuery(this.query);
+
+        allWords.removeAll(expectedWords);
+
         this.query = StringHandler.concatenateWords(allWords);
 
         return this.query;
@@ -54,28 +77,6 @@ public class Lexico {
 
     public void addInQueue() {
         queue.addAll(StringHandler.splitQuery(this.query));
-    }
-
-    private List<String> stopWords() {
-        // Fonte stopWords.txt: https://github.com/stopwords-iso/stopwords-pt/blob/master/stopwords-pt.txt
-        List<String> stopWords = new ArrayList<>();
-
-        try {
-            FileReader fr = new FileReader("stopWords.txt");
-            BufferedReader br = new BufferedReader(fr);
-
-            String word;
-
-            while((word = br.readLine()) != null) {
-                stopWords.add(word);
-            }
-
-            br.close();
-        } catch (IOException e) {
-            System.err.println("Arquivo de stopWords.txt não encontrado!");
-        }
-
-        return stopWords;
     }
 
     private boolean isPartOfTheAlphabet(String content) {

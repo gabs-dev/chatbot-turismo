@@ -1,15 +1,14 @@
-import Lexico.Lexico;
+import Lexicon.Lexicon;
+import Syntactic.Syntactic;
 
 public class Main {
     public static void main(String[] args) {
 
-        Lexico lexico = new Lexico();
+        Lexicon lexicon = new Lexicon();
 
-        String query = "O clim@ vai estar chuvoso em fortaleza no natal?";
+        //String query = "O clima vai estar chuvoso em fortaleza no natal?";
+        String query = "Lista de restaurantes em Londres";
 
-        lexico.removeStopWords(query);
-        lexico.addInSymbolTable();
-        lexico.addInQueue();
-
+        lexicon.init(query);
     }
 }
