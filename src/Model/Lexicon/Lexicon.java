@@ -1,12 +1,9 @@
-package Lexicon;
+package Model.Lexicon;
 
-import Syntactic.Syntactic;
+import Model.Syntactic.Syntactic;
 import Util.ReadFiles;
 import Util.StringHandler;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.*;
 
 public class Lexicon {
@@ -27,7 +24,7 @@ public class Lexicon {
         addInQueue();
         removeExpectedWords();
         addInSymbolTable();
-        Syntactic syntactic = new Syntactic(queue);
+        Syntactic syntactic = new Syntactic(queue, symbolTable);
         syntactic.checkRule(queue);
     }
 

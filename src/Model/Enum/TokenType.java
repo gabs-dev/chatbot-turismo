@@ -1,4 +1,4 @@
-package Syntactic;
+package Model.Enum;
 
 public enum TokenType {
     SITUACAO,

@@ -1,8 +1,10 @@
-package Syntactic;
+package Model.Syntactic;
+
+import Model.Enum.TokenType;
 
 import java.util.*;
 
-import static Syntactic.TokenType.*;
+import static Model.Enum.TokenType.*;
 
 public class Token {
 
@@ -13,7 +15,7 @@ public class Token {
     private List<String> lugar = Arrays.asList("praia", "museu", "shopping", "parque", "trilha", "cachoeira");
     private List<String> forma = Arrays.asList("rápido", "carro", "pé", "andando", "ônibus", "metrô");
     private List<String> epoca = Arrays.asList("natal", "ano novo", "reveillon", "carnaval");
-    private List<String> cidade = Arrays.asList("fortaleza", "rio de janeiro", "gramado", "orlando", "paris", "salvador", "londres", "natal", "são luís", "maceió");
+    private List<String> cidade = Arrays.asList("fortaleza", "gramado", "orlando", "paris", "salvador", "londres", "natal", "maceió");
     private List<String> estabelecimento = Arrays.asList("pousada", "shopping", "restaurantes", "sorveteria", "lanchonete", "farmácia", "cafeteria");
     private List<String> clima = Arrays.asList("frio", "chuvoso", "nublado", "nevando", "ensolarado");
 
