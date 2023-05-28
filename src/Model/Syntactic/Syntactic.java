@@ -26,8 +26,8 @@ public class Syntactic {
         this.symbolTable = symbolTable;
     }
 
-    public Response checkRule(Queue<String> tokens) {
-        String rule = tokens.peek().toLowerCase();
+    public Response checkRule() {
+        String rule = this.tokens.peek().toLowerCase();
         Response response = null;
 
         switch (rule) {
@@ -54,19 +54,34 @@ public class Syntactic {
     }
 
     private Response processComo() {
-        Queue<String> copyTokens = new LinkedList<>();
-        copyTokens.addAll(tokens);
-        copyTokens.poll();
+        List<String> copy = copyOfTokenList();
+        String token = copy.get(0);
 
-        return null;
+        if (isTokenType(ALGO, token))
+            return allTokensInQuery(new LinkedList<>(Arrays.asList(ALGO)));
+        else if (isTokenType(LUGAR, token))
+            return allTokensInQuery(new LinkedList<>(Arrays.asList(LUGAR, FORMA)));
+
+        return new Response(ERROR, "Não entendi.");
     }
 
     private Response processQual() {
-        return null;
+        List<String> copy = copyOfTokenList();
+        String token = copy.get(0);
+
+        if (isTokenType(SITUACAO, token)) {
+            if (copy.size() == 1)
+                return allTokensInQuery(new LinkedList<>(Arrays.asList(SITUACAO)));
+            else
+                return allTokensInQuery(new LinkedList<>(Arrays.asList(SITUACAO, QUANDO, CIDADE)));
+        } else if (isTokenType(PACOTE, token))
+            return allTokensInQuery(new LinkedList<>(Arrays.asList(PACOTE, CIDADE)));
+
+        return new Response(ERROR, "Não entendi.");
     }
 
     private Response processPara() {
-        return null;
+        return allTokensInQuery(new LinkedList<>(Arrays.asList(EPOCA)));
     }
 
     private Response processLista() {
@@ -80,7 +95,7 @@ public class Syntactic {
     }
 
     private Response processClima() {
-        return null;
+        return allTokensInQuery(new LinkedList<>(Arrays.asList(CLIMA, CIDADE, EPOCA)));
     }
 
     private Response allTokensInQuery(List<TokenType> expectedTokens) {
@@ -109,7 +124,7 @@ public class Syntactic {
     // CRIAR UM OBJETO RESPONSE QUE VAI CONTER OS DADOS E SE DEU TUDO CERTO NA REQUISIÇÃO
     // VALIDAR ESSE OBJETO NA INTERAÇÃO COM O USUÁRIO E CASO ESTEJA FALTANDO ALGO PERGUNTAR
     private Response resolveTokens(List<String> tokens, List<TokenType> expectedTokens) {
-        String defaultMessage = "Para qual %s você deseja?";
+        String defaultMessage = "Para qual %s você deseja saber?";
         Response response = new Response();
 
         if (tokens.size() > expectedTokens.size()) {

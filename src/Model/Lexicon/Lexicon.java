@@ -24,8 +24,6 @@ public class Lexicon {
         addInQueue();
         removeExpectedWords();
         addInSymbolTable();
-        Syntactic syntactic = new Syntactic(queue, symbolTable);
-        syntactic.checkRule(queue);
     }
 
     public void checkAlphabet(String query) {
@@ -76,6 +74,10 @@ public class Lexicon {
         queue.addAll(StringHandler.splitQuery(this.query));
     }
 
+    public void addInQueue(List<String> tokens) {
+        queue.addAll(tokens);
+    }
+
     private boolean isPartOfTheAlphabet(String content) {
         String regex = "[\\p{L}\\p{N}\\p{P}\\p{Zs}@]+";
 
@@ -85,4 +87,11 @@ public class Lexicon {
         return false;
     }
 
+    public List<String> getSymbolTable() {
+        return symbolTable;
+    }
+
+    public Queue<String> getQueue() {
+        return queue;
+    }
 }
