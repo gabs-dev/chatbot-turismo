@@ -1,0 +1,19 @@
+Supondo um pacote básico de viagem para Fortaleza, o valor é de R$ 2.500,00 por pessoa.
+
+Considerando uma estadia de três noites em um hotel de categoria média no Rio de Janeiro, o valor é de R$ 800,00 por pessoa.
+
+Os valores dos ingressos em Gramado variam dependendo das atrações escolhidas. Por exemplo, o ingresso para o Snowland, um parque temático de neve, custa R$ 150,00 por pessoa.
+
+Em Orlando, os valores dos passeios também variam. Por exemplo, o ingresso para o parque temático da Disney custa a partir de US$ 109,00 por pessoa.
+
+Supondo um pacote de viagem para Paris, incluindo passagens aéreas e hospedagem em um hotel de categoria média, o valor é de R$ 5.000,00 por pessoa.
+
+Considerando uma estadia de cinco noites em um hotel na praia de Salvador, o valor é de R$ 1.200,00 por pessoa.
+
+Em Londres, os valores dos ingressos também variam. Por exemplo, o ingresso para a London Eye, uma famosa roda-gigante, custa £30,00 (libras esterlinas) por pessoa.
+
+Em Natal, os valores dos passeios dependem das atividades escolhidas. Por exemplo, um passeio de buggy pelas dunas de Genipabu custa R$ 100,00 por pessoa.
+
+Supondo um pacote de viagem para São Luís, incluindo passagens aéreas e hospedagem em um hotel de categoria média, o valor é de R$ 3.500,00 por pessoa.
+
+Considerando uma estadia de quatro noites em um resort all-inclusive em Maceió, o valor é de R$ 2.000,00 por pessoa.

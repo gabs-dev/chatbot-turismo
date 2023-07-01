@@ -1,0 +1,77 @@
+Lista de pousadas em Fortaleza: Pousada das Ondas, Villa dos Ventos, Mar e Sol.
+Lista de pousadas em Rio de Janeiro: Pousada Carioca, Sol e Mar, Villa Copacabana.
+Lista de pousadas em Gramado: Pousada das Flores, Villa da Serra, Chalé dos Sonhos.
+Lista de pousadas em Orlando: Pousada dos Sonhos, Villa Mágica, Aconchego em Orlando.
+Lista de pousadas em Paris: Pousada Romântica, Villa Parisiense, Aconchego em Montmartre.
+Lista de pousadas em Salvador: Pousada do Sol, Villa Bahiana, Mar e Areia.
+Lista de pousadas em Londres: Pousada Britânica, Villa dos Guardiões, Aconchego na City.
+Lista de pousadas em Natal: Pousada Beira-Mar, Villa das Dunas, Mar e Brisa.
+Lista de pousadas em São Luís: Pousada Maranhense, Villa Histórica, Aconchego no Centro.
+Lista de pousadas em Maceió: Pousada das Águas, Villa do Mar, Mar e Coqueiros.
+
+Lista de shoppings em Fortaleza: Shopping Center Fortaleza, Plaza Shopping, North Shopping.
+Lista de shoppings em Rio de Janeiro: Shopping Rio Sul, Barra Shopping, Norte Shopping.
+Lista de shoppings em Gramado: Gramado Shopping, Rua Coberta, Galeria de Artes.
+Lista de shoppings em Orlando: Mall at Millenia, Florida Mall, The Florida Mall.
+Lista de shoppings em Paris: Galeries Lafayette, Le Bon Marché, Forum des Halles.
+Lista de shoppings em Salvador: Salvador Shopping, Shopping da Bahia, Shopping Barra.
+Lista de shoppings em Londres: Westfield London, Covent Garden, Harrods.
+Lista de shoppings em Natal: Natal Shopping, Midway Mall, Praia Shopping.
+Lista de shoppings em São Luís: São Luís Shopping, Shopping da Ilha, Rio Anil Shopping.
+Lista de shoppings em Maceió: Maceió Shopping, Parque Shopping Maceió, Shopping Pátio Maceió.
+
+Lista de restaurantes em Fortaleza: Restaurante Beira-Mar, Cozinha Cearense, Churrascaria Gaúcha.
+Lista de restaurantes em Rio de Janeiro: Restaurante Carioca, Comida Típica Brasileira, Sushi Lounge.
+Lista de restaurantes em Gramado: Restaurante Serrano, Fondue House, Bistrô da Vila.
+Lista de restaurantes em Orlando: Orlando Steakhouse, Italian Trattoria, Asian Fusion.
+Lista de restaurantes em Paris: French Bistro, Gastronomia Francesa, Café à la Mode.
+Lista de restaurantes em Salvador: Restaurante Baiano, Moqueca de Mariscos, Pizzaria Tropical.
+Lista de restaurantes em Londres: British Pub, Fish and Chips, Indian Curry House.
+Lista de restaurantes em Natal: Restaurante Beira-Mar, Frutos do Mar, Cozinha Nordestina.
+Lista de restaurantes em São Luís: Restaurante Maranhense, Cozinha Regional, Churrascaria Sulista.
+Lista de restaurantes em Maceió: Restaurante Alagoano, Frutos do Mar, Cozinha Internacional.
+
+Lista de sorveterias em Fortaleza: Sorveteria Gelatto, Sorvetes Delícia, Viva Gelateria.
+Lista de sorveterias em Rio de Janeiro: Sorveteria Carioca, Gelateria da Praia, Ice Cream Heaven.
+Lista de sorveterias em Gramado: Gelateria Serrana, Sorvetes do Vale, Neve Gelato.
+Lista de sorveterias em Orlando: Orlando Ice Cream, Sweet Treats, Gelato Fantasy.
+Lista de sorveterias em Paris: Glaces Parisiennes, Gelateria Eiffel, La Crème Glacée.
+Lista de sorveterias em Salvador: Sorveteria Baiana, Gelateria do Farol, Tropical Gelato.
+Lista de sorveterias em Londres: London Ice Cream, Gelato Shop, Sweet Temptations.
+Lista de sorveterias em Natal: Sorveteria Beira-Mar, Gelateria Dunas, Ice Cream Paradise.
+Lista de sorveterias em São Luís: Sorveteria Maranhense, Gelateria da Ilha, Frozen Delights.
+Lista de sorveterias em Maceió: Sorveteria Alagoana, Gelateria do Mar, Delícia Gelada.
+
+Lista de lanchonetes em Fortaleza: Lanchonete da Praia, Hamburgueria do Sol, Lanche Rápido.
+Lista de lanchonetes em Rio de Janeiro: Lanchonete Carioca, Sanduíches Deliciosos, Burger Express.
+Lista de lanchonetes em Gramado: Lanchonete Serrana, Sanduíches da Vila, Lanches Gourmet.
+Lista de lanchonetes em Orlando: Orlando Diner, Fast Food Central, Burger Joint.
+Lista de lanchonetes em Paris: French Bistro, Lanches à la Mode, Croque Monsieur Express.
+Lista de lanchonetes em Salvador: Lanchonete Baiana, Lanches Tropicais, Hamburgueria do Pelourinho.
+Lista de lanchonetes em Londres: British Diner, Fish and Chips Express, Gourmet Burgers.
+Lista de lanchonetes em Natal: Lanchonete Beira-Mar, Sanduíches das Dunas, Fast Food Tropical.
+Lista de lanchonetes em São Luís: Lanchonete Maranhense, Lanches Regionais, Fast Food Nordestino.
+Lista de lanchonetes em Maceió: Lanchonete Alagoana, Lanches à Beira-Mar, Burgers Gourmet.
+
+
+Lista de farmácias em Fortaleza: Farmácia São José, Drogaria Central, Pharma Vida.
+Lista de farmácias em Rio de Janeiro: Farmácia Carioca, Drogaria Popular, Farma Express.
+Lista de farmácias em Gramado: Farmácia Serrana, Drogaria do Vale, Pharma Vida.
+Lista de farmácias em Orlando: Orlando Pharmacy, CVS Pharmacy, Walgreens.
+Lista de farmácias em Paris: Pharmacie Parisienne, Pharmacy de la Ville, Pharma Express.
+Lista de farmácias em Salvador: Farmácia Baiana, Drogaria do Pelourinho, Pharma Tropical.
+Lista de farmácias em Londres: British Pharmacy, Boots, Pharma Express.
+Lista de farmácias em Natal: Farmácia Beira-Mar, Drogaria das Dunas, Pharma Vida.
+Lista de farmácias em São Luís: Farmácia Maranhense, Drogaria do Centro, Pharma Nordeste.
+Lista de farmácias em Maceió: Farmácia Alagoana, Drogaria do Mar, Pharma Tropical.
+
+Lista de cafeterias em Fortaleza: Cafeteria do Sol, Café do Mar, Espresso Central.
+Lista de cafeterias em Rio de Janeiro: Cafeteria Carioca, Café da Praia, Espresso Express.
+Lista de cafeterias em Gramado: Cafeteria Serrana, Café da Vila, Cappuccino Delícia.
+Lista de cafeterias em Orlando: Orlando Coffee, Central Perk, Espresso Paradise.
+Lista de cafeterias em Paris: Café Parisiense, Café da Rive Gauche, Cappuccino au Chocolat.
+Lista de cafeterias em Salvador: Cafeteria Baiana, Café do Pelourinho, Espresso Tropical.
+Lista de cafeterias em Londres: British Café, Tea and Coffee House, Espresso Express.
+Lista de cafeterias em Natal: Cafeteria Beira-Mar, Café das Dunas, Cappuccino Marinho.
+Lista de cafeterias em São Luís: Cafeteria Maranhense, Café do Centro, Espresso Nordeste.
+Lista de cafeterias em Maceió: Cafeteria Alagoana, Café do Mar, Cappuccino Tropical.

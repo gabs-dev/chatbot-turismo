@@ -1,0 +1,54 @@
+crianças | d2 
+sozinho | 
+casal | d2 
+amigos | d2 
+namorado | 
+encontro | d2 
+transporte | d1 
+hospedagem | d1 d3 
+ingressos | d1 d3 
+passagem | d1 
+malas | d1 
+hotel | d1 d3 
+reservas | d1 
+noite | d2 d3 
+tarde | 
+manhã | 
+sol | d1 d2 d5 d6 d7 
+viagem | d3 
+passeios | d2 d3 
+praia | d2 d3 d4 d6 
+museu | d2 d4 
+shopping | d4 1d6
+parque | d2 d3 d4 d6 
+trilha | d2 d4 
+cachoeira | d4 
+rápido | d6 
+carro | d2 d4 
+pé | d4 
+andando | 
+ônibus | d1 d4 
+metrô | d4 
+natal | d3 d5 d6 d7 
+ano novo | d5 d7 
+reveillon | d5 d7 
+carnaval | d5 d7 
+fortaleza | d3 d6 d7 
+gramado | d3 d6 d7 
+orlando | d2 d3 d6 d7 
+paris | d3 d6 d7 
+salvador | d3 d5 d6 d7 
+londres | d3 d6 d7 
+são luís | d3 d6 d7 
+maceió | d3 d6 d7 
+pousada | d6 
+restaurantes | d2 d6 
+sorveteria | d6 
+lanchonete | d6 
+farmácia | d6 
+cafeteria | d6 
+frio | d7 
+chuvoso | d7 
+nublado | d7 
+nevando | d7 
+ensolarado | d2 d5 d7 

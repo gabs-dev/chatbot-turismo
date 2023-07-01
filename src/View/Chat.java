@@ -3,7 +3,8 @@ package View;
 import Model.Lexicon.Lexicon;
 import Model.Response;
 import Model.Syntactic.Syntactic;
-import Util.ReadFiles;
+import Model.Translator.Translator;
+import Util.FileHandler;
 
 import java.util.Scanner;
 
@@ -41,11 +42,16 @@ public class Chat {
                 response = handleMissingTokens(response);
             }
 
-            if (response.getResponseType() == OK)
-                System.out.println("OK");
+            if (response.getResponseType() == OK) {
+                Translator translator = new Translator(lexicon.getQueue());
 
+                Response answer = translator.generateAnswer();
+
+                System.out.println(answer.getMessage());
+            }
+
+            System.out.println("Como posso ajudar?");
         }
-
     }
 
     private Response handleMissingTokens(Response response) {
@@ -53,7 +59,7 @@ public class Chat {
             String query;
             System.out.println(response.getMessage());
             query = input.nextLine();
-            while (query.isEmpty() || query.isBlank() || (!ReadFiles.readExpectedWordsFile().contains(query.toLowerCase()))) {
+            while (query.isEmpty() || query.isBlank() || (!FileHandler.readExpectedWordsFile().contains(query.toLowerCase()))) {
                 System.out.println("Não entendi.");
                 System.out.println(response.getMessage());
                 query = input.nextLine();

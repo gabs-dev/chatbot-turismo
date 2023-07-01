@@ -16,8 +16,6 @@ tarde
 manhã
 sol
 viagem
-hospedagem
-ingressos
 passeios
 praia
 museu

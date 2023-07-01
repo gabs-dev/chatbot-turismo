@@ -1,4 +1,4 @@
-import Model.Lexicon.Lexicon;
+import Util.Indexing;
 import View.Chat;
 
 public class Main {

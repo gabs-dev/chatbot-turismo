@@ -32,20 +32,15 @@ public class Syntactic {
 
         switch (rule) {
             case "como":
-                processComo();
-                break;
+                return processComo();
             case "qual":
-                processQual();
-                break;
+                return processQual();
             case "para":
-                processPara();
-                break;
+                return processPara();
             case "lista":
-                response =  processLista();
-                break;
+                return processLista();
             case "clima":
-                processClima();
-                break;
+                return processClima();
             default:
                 response = new Response(ERROR, "Não entendi.");
         }

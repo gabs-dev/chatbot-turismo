@@ -1,7 +1,6 @@
 package Model.Lexicon;
 
-import Model.Syntactic.Syntactic;
-import Util.ReadFiles;
+import Util.FileHandler;
 import Util.StringHandler;
 
 import java.util.*;
@@ -42,7 +41,7 @@ public class Lexicon {
     public String removeStopWords(String query) {
         checkAlphabet(query);
 
-        List<String> stopWords = ReadFiles.readStopWordsFile();
+        List<String> stopWords = FileHandler.readStopWordsFile();
 
         List<String> allWords = StringHandler.splitQuery(this.query);
 
@@ -53,7 +52,7 @@ public class Lexicon {
     }
 
     public String removeExpectedWords() {
-        List<String> expectedWords = ReadFiles.readExpectedWordsFile();
+        List<String> expectedWords = FileHandler.readExpectedWordsFile();
 
         List<String> allWords = StringHandler.splitQuery(this.query);
 
